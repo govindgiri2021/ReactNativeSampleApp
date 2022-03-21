@@ -28,7 +28,7 @@ node ('') {
                         sh 'sudo npm install --global yarn --force'
                         sh 'sudo yarn add react-native-cli'
                         sh 'sudo react-native init ReactNativeApp'
-                        sh 'cd "/var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp"
+                        sh 'cd /var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp'
                         sh 'sudo npx react-native start'
                       
                         sh 'sudo npx react-native run-android'
