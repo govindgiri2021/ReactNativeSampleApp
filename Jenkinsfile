@@ -32,12 +32,19 @@ node ('') {
                         sh 'pwd'
                         sh 'ls -al'
                        // sh 'sudo npx react-native start'
+                       // sh 'sudo npm install'
+                       // sh 'sudo react-native run-android'
+                        //sh "./gradlew clean"
+                        //sh 'echo $JAVA_HOME'
+                    }
+                    dir("ReactNativeApp") {
+                        sh 'pwd'
+                        sh 'ls -al'
+                       // sh 'sudo npx react-native start'
                         sh 'sudo npm install'
                         sh 'sudo react-native run-android'
                         sh "./gradlew clean"
-                        sh 'echo $JAVA_HOME'
-                    }
-                    dir("android") {
+                        sh 'echo $JAVA_HOME
                         sh "pwd"
                         //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
                         sh "bundle install"
