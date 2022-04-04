@@ -29,6 +29,8 @@ node ('') {
                         sh 'sudo yarn add react-native-cli'
                         sh 'sudo react-native init ReactNativeApp'
                         sh 'cd /var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp'
+                        sh 'pwd'
+                        sh 'ls -al'
                        // sh 'sudo npx react-native start'
                         sh 'sudo npm install'
                         sh 'sudo react-native run-android'
@@ -37,7 +39,7 @@ node ('') {
                     }
                     dir("android") {
                         sh "pwd"
-                        sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
+                        //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
                         sh "bundle install"
                         sh "fastlane distribute version_code:1000$BUILD_NUMBER store_password:$KEYSTORE_PASSWORD key_alias:$KEYWORD_ALIAS"
                     }
