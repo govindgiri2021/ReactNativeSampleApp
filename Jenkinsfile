@@ -41,7 +41,7 @@ node ('') {
                         sh 'pwd'
                         sh 'ls -al'
                        // sh 'sudo npx react-native start'
-                        sh 'sudo npm install'
+                        //sh 'sudo npm install'
                         sh 'sudo react-native run-android'
                         sh "./gradlew clean"
                         sh 'echo $JAVA_HOME'
