@@ -42,6 +42,9 @@ node ('') {
                         sh 'ls -al'
                        // sh 'sudo npx react-native start'
                         //sh 'sudo npm install'
+                        sh 'export ANDROID_HOME=/usr/lib/android-sdk'
+                        sh 'export PATH=$ANDROID_HOME/platform-tools:$PATH'
+                        sh 'export PATH=$ANDROID_HOME/tools:$PATH'
                         sh 'sudo react-native run-android'
                         sh "./gradlew clean"
                         sh 'echo $JAVA_HOME'
