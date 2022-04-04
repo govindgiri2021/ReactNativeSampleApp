@@ -19,7 +19,7 @@ node ('') {
                         sh 'sudo npm uninstall -g nativescript'
                         sh 'sudo npm i -g nativescript'
                         sh 'sudo npm i tns-core-modules@latest --save'
-                        sh 'sudo npm install'
+                        //sh 'sudo npm install'
                         sh 'sudo npm install npm@latest -g'
                         sh 'sudo npm i -g npm@8.3.1'
                         sh 'sudo npm install --save-dev jetifier'
