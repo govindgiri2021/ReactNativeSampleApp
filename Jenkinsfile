@@ -45,6 +45,7 @@ node ('') {
                         sh 'export ANDROID_HOME=/usr/lib/android-sdk'
                         sh 'export PATH=$ANDROID_HOME/platform-tools:$PATH'
                         sh 'export PATH=$ANDROID_HOME/tools:$PATH'
+                        sh 'sudo ln -s /usr/lib/android-sdk/platform-tools/adb /bin/adb'
                         sh 'sudo react-native run-android'
                         sh "./gradlew clean"
                         sh 'echo $JAVA_HOME'
