@@ -15,7 +15,7 @@ node ('') {
                     }
                     dir("android") {
                         //sh 'export PATH=$PATH:/usr/lib/jvm/java-11-openjdk-amd64.'
-                        sh "export JAVA_HOME=${JAVA_HOME}"
+                        //sh "export JAVA_HOME=${JAVA_HOME}"
                         sh 'sudo npm uninstall -g nativescript'
                         sh 'sudo npm i -g nativescript'
                         sh 'sudo npm i tns-core-modules@latest --save'
@@ -45,7 +45,7 @@ node ('') {
                         sh 'export ANDROID_HOME=/usr/lib/android-sdk'
                         sh 'export PATH=$ANDROID_HOME/platform-tools:$PATH'
                         sh 'export PATH=$ANDROID_HOME/tools:$PATH'
-                        sh 'sudo ln -s /usr/lib/android-sdk/platform-tools/adb /bin/adb'
+                       // sh 'sudo ln -s /usr/lib/android-sdk/platform-tools/adb /bin/adb'
                         sh 'sudo react-native run-android'
                         sh "./gradlew clean"
                         sh 'echo $JAVA_HOME'
