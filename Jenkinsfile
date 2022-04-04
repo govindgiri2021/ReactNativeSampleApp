@@ -44,7 +44,7 @@ node ('') {
                         sh 'sudo npm install'
                         sh 'sudo react-native run-android'
                         sh "./gradlew clean"
-                        sh 'echo $JAVA_HOME
+                        sh 'echo $JAVA_HOME'
                         sh "pwd"
                         //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
                         sh "bundle install"
