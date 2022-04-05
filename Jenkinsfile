@@ -37,7 +37,7 @@ node ('') {
                         //sh 'gradlew clean'
                         //sh 'echo $JAVA_HOME'
                    
-                    dir("/var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp/android/") {
+                    dir("ReactNativeApp/android/") {
                         sh 'pwd'
                         sh 'ls -al'
                        // sh 'sudo npx react-native start'
