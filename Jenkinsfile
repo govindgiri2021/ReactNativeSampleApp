@@ -27,7 +27,7 @@ node ('') {
                         //sh 'sudo npm install -g react-native-cli'
                         //sh 'sudo npm install --global yarn --force'
                         //sh 'sudo yarn add react-native-cli'
-                        sh 'sudo react-native init ReactNativeApp'
+                        //sh 'sudo react-native init ReactNativeApp'
                       //  sh 'cd /var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp/'
                        // sh 'pwd'
                        // sh 'ls -al'
