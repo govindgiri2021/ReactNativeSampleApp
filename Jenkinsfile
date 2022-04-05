@@ -34,10 +34,10 @@ node ('') {
                        // sh 'sudo npx react-native start'
                         sh 'sudo npm install'
                        // sh 'sudo react-native run-android'
-                        //sh "./gradlew clean"
+                        //sh 'gradlew clean'
                         //sh 'echo $JAVA_HOME'
                     }
-                    dir("/var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp") {
+                    dir("/var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp/android/") {
                         sh 'pwd'
                         sh 'ls -al'
                        // sh 'sudo npx react-native start'
@@ -47,7 +47,7 @@ node ('') {
                         sh 'export PATH=$ANDROID_HOME/tools:$PATH'
                        // sh 'sudo ln -s /usr/lib/android-sdk/platform-tools/adb /bin/adb'
                         //sh 'sudo react-native run-android'
-                        //sh "./gradlew clean"
+                        sh 'gradlew clean'
                         sh 'echo $JAVA_HOME'
                         sh "pwd"
                         //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
