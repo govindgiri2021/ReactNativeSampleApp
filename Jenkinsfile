@@ -47,7 +47,7 @@ node ('') {
                         sh 'export PATH=$ANDROID_HOME/tools:$PATH'
                        // sh 'sudo ln -s /usr/lib/android-sdk/platform-tools/adb /bin/adb'
                         //sh 'sudo react-native run-android'
-                        sh 'gradlew clean'
+                        sh 'gradle clean'
                         sh 'echo $JAVA_HOME'
                         sh "pwd"
                         //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
