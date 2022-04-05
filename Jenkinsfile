@@ -24,7 +24,7 @@ node ('') {
                        // sh 'sudo npm i -g npm@8.3.1'
                        // sh 'sudo npm install --save-dev jetifier'
                        // sh 'sudo npx jetify'
-                        /sh 'sudo npm install -g react-native-cli'
+                        //sh 'sudo npm install -g react-native-cli'
                         //sh 'sudo npm install --global yarn --force'
                         //sh 'sudo yarn add react-native-cli'
                         sh 'sudo react-native init ReactNativeApp'
