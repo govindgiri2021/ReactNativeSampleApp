@@ -7,7 +7,7 @@ node ('') {
             step([$class: 'WsCleanup'])
            
             stage('Build & Deployment') {
-                def k8sImage = docker.image('shridhanr/andriodapp:latest')
+                def k8sImage = docker.image('shridhanr/androidapp:latest')
                 k8sImage.inside("-u 0:0 --entrypoint=''") {
                     sh 'apt-get update && apt-get -y install sudo'
                     sh "javac -version"
