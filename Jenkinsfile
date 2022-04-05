@@ -36,7 +36,7 @@ node ('') {
                        // sh 'sudo react-native run-android'
                         //sh 'gradlew clean'
                         //sh 'echo $JAVA_HOME'
-                    }
+                   
                     dir("/var/lib/jenkins/workspace/android_app_test1/android/ReactNativeApp/android/") {
                         sh 'pwd'
                         sh 'ls -al'
@@ -53,6 +53,7 @@ node ('') {
                         //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
                         sh "bundle install"
                         sh "fastlane distribute version_code:1000$BUILD_NUMBER store_password:$KEYSTORE_PASSWORD key_alias:$KEYWORD_ALIAS"
+                       }
                     }
                 }
             }
