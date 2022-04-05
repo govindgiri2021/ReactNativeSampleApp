@@ -36,10 +36,21 @@ node ('') {
                        // sh 'sudo react-native run-android'
                         //sh 'gradlew clean'
                         //sh 'echo $JAVA_HOME'
-                   
+                   dir('ReactNativeApp') {
+                         sh "pwd"
+                      dir('android') {
+                         sh "pwd"
+                         sh 'gradle clean'
+                        sh 'echo $JAVA_HOME'
+                        sh "pwd"
+                        //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
+                        sh "bundle install"
+                        sh "fastlane distribute version_code:1000$BUILD_NUMBER store_password:$KEYSTORE_PASSWORD key_alias:$KEYWORD_ALIAS"
+                        }
+                        }
                    // dir("ReactNativeApp/android/") {
-                        sh 'pwd'
-                        sh 'ls -al'
+                       // sh 'pwd'
+                       // sh 'ls -al'
                        // sh 'sudo npx react-native start'
                         //sh 'sudo npm install'
                        // sh 'export ANDROID_HOME=/usr/lib/android-sdk'
@@ -47,12 +58,12 @@ node ('') {
                         //sh 'export PATH=$ANDROID_HOME/tools:$PATH'
                        // sh 'sudo ln -s /usr/lib/android-sdk/platform-tools/adb /bin/adb'
                         //sh 'sudo react-native run-android'
-                        sh 'gradle clean'
-                        sh 'echo $JAVA_HOME'
-                        sh "pwd"
+                       // sh 'gradle clean'
+                        //sh 'echo $JAVA_HOME'
+                      //  sh "pwd"
                         //sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
-                        sh "bundle install"
-                        sh "fastlane distribute version_code:1000$BUILD_NUMBER store_password:$KEYSTORE_PASSWORD key_alias:$KEYWORD_ALIAS"
+                       // sh "bundle install"
+                     //   sh "fastlane distribute version_code:1000$BUILD_NUMBER store_password:$KEYSTORE_PASSWORD key_alias:$KEYWORD_ALIAS"
                       // }
                     }
                 }
