@@ -19,7 +19,7 @@ node ('') {
                           //sh "npm install --save"
                           //snpm install -g npm
                           sh "chmod -R 755 /root/"
-                          sh './gradlew clean'
+                          sh './gradlew clean && chmod -R 755 /root'
                           sh "bundle install"
                           sh "fastlane distribute version_code:1000$BUILD_NUMBER store_password:$KEYSTORE_PASSWORD key_alias:$KEYWORD_ALIAS"
                     }
