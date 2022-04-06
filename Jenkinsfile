@@ -13,7 +13,8 @@ node ('') {
                     dir("android") {
                           sh 'sudo npm install -g react-native-cli'
                          // sh 'npm install'
-                          sh 'npm i -f'
+                         // sh 'npm i -f'
+                          sh "npm install -f --save"
                           sh './gradlew clean'
                           sh "bundle install"
                           sh "fastlane distribute version_code:1000$BUILD_NUMBER store_password:$KEYSTORE_PASSWORD key_alias:$KEYWORD_ALIAS"
