@@ -11,7 +11,7 @@ node ('') {
                 k8sImage.inside("-u 0:0 --entrypoint=''") {
                     
                     dir("android") {
-                          sh 'sudo npm install -g react-native-cli'
+                          //sh 'sudo npm install -g react-native-cli'
                          // sh 'npm install'
                          // sh 'npm i -f'
                           //sh "npm install -g npm"
