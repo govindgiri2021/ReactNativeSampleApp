@@ -15,6 +15,7 @@ node ('') {
                          // sh 'npm install'
                          // sh 'npm i -f'
                           sh "npm install -g npm"
+                          sh "npm install -f"
                           sh "npm install --save"
                           //snpm install -g npm
                           sh './gradlew clean'
